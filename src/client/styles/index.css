@@ -1,0 +1,39 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer components {
+  .form-control {
+    @apply px-3 py-2 border border-slate-300 rounded-md shadow-sm w-full focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500;
+  }
+
+  .form-error-txt {
+    @apply text-red-500 text-sm h-2;
+  }
+
+  .btn-primary {
+    @apply flex text-white text-sm font-semibold rounded-lg bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 px-4 py-2 mt-8;
+  }
+
+  .btn-primary:disabled {
+    @apply bg-gray-200 text-gray-400;
+  }
+
+  .btn-danger {
+    @apply flex text-white font-semibold rounded-lg bg-red-500 hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-300 px-4 py-2 mt-8;
+  }
+
+  .nav-link {
+    @apply text-lg font-semibold hover:bg-gray-100 px-3 py-2 rounded-lg;
+  }
+
+  .checkbox {
+    @apply rounded-lg;
+  }
+
+  .checkbox-label {
+    @apply ml-2 text-sm font-medium;
+  }
+}
