@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import FormError from "../components/FormError";
 import { apiService } from "../services/api-service";
 
@@ -78,6 +78,15 @@ const Login = () => {
           </button>
           <FormError errorMsg={error} />
           {/* Submit button */}
+        </div>
+        <div className="my-3">
+          Don't have an account?{" "}
+          <Link
+            to="/register"
+            className="text-blue-500 hover:cursor-pointer hover:text-blue-600"
+          >
+            Register
+          </Link>
         </div>
       </div>
       {/* Heading, form, submit button */}

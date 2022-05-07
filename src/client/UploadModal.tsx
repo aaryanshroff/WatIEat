@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import * as tf from "@tensorflow/tfjs";
 import { CLASSES } from "./classes";
-import meals from "../server/db/queries/meals";
 import { Meal, MealTable } from "../server/db/models";
 import { apiService } from "./services/api-service";
 import Spinner from "./components/Spinner";
@@ -151,7 +150,12 @@ const UploadModal: React.FC<UploadModalProps> = (props) => {
           className="opacity-0 h-0 w-0"
         />
         {meal && (
-          <div>{meal.name.charAt(0).toUpperCase() + meal.name.slice(1)}</div>
+          <>
+            <div>{meal.name.charAt(0).toUpperCase() + meal.name.slice(1)}</div>
+            <div>Calories: {meal.calories}</div>
+            <div>Carbohydrates: {meal.carbohydrates}</div>
+            <div>Protein: {meal.protein}</div>
+          </>
         )}
 
         <button

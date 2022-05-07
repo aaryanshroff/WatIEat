@@ -108,6 +108,15 @@ const Register = () => {
             </button>
             {/* Submit button */}
           </div>
+          <div className="my-3">
+            Have an account already?{" "}
+            <Link
+              to="/login"
+              className="text-blue-500 hover:cursor-pointer hover:text-blue-600"
+            >
+              Login
+            </Link>
+          </div>
         </div>
         {/* Heading, form, submit button */}
         <Link to={""}></Link>

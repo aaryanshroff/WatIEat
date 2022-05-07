@@ -14,5 +14,5 @@ export interface Meal {
 export interface MealTable extends Meal {
   id: number;
   user_id: number;
-  timestamp: Date;
+  timestamp: string;
 }

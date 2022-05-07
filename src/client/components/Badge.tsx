@@ -12,7 +12,14 @@ const Badge: React.FC<BadgeProps> = ({ name, pastMeals }) => {
       <h1 className="uppercase text-xs">{name}</h1>
       <h1 className="text-lg">
         {pastMeals.reduce((acc, currMeal) => {
-          return acc + currMeal[name];
+          // Only add to total if meal was consumed today
+          const todayDate = new Date().toISOString().split("T")[0];
+          return (
+            acc +
+            (currMeal.timestamp.split("T")[0] === todayDate
+              ? currMeal[name]
+              : 0)
+          );
         }, 0)}
       </h1>
     </div>

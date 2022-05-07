@@ -62,7 +62,7 @@ const App = () => {
           </button>
         </div>
         <div className="flex my-4">
-          <h1 className="font-semibold text-lg">Day</h1>
+          <h1 className="font-semibold text-lg">Today</h1>
         </div>
 
         <div className="flex space-x-4">
