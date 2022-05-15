@@ -4,7 +4,7 @@ import { TableColumnsActive } from "../Table";
 interface TableCheckboxProps {
   columnName: string;
   columns: TableColumnsActive;
-  setColumns: (TableColumnsActive) => void;
+  setColumns: React.Dispatch<React.SetStateAction<TableColumnsActive>>;
 }
 
 const TableCheckbox: React.FC<TableCheckboxProps> = ({
@@ -17,10 +17,12 @@ const TableCheckbox: React.FC<TableCheckboxProps> = ({
       <input
         type="checkbox"
         className="checkbox"
+        // @ts-ignore
         checked={columns[columnName]}
         onChange={(e) =>
-          setColumns((columns) => ({
+          setColumns((columns: TableColumnsActive) => ({
             ...columns,
+            // @ts-ignore
             [columnName]: !columns[columnName],
           }))
         }

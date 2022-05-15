@@ -17,7 +17,8 @@ const Badge: React.FC<BadgeProps> = ({ name, pastMeals }) => {
           return (
             acc +
             (currMeal.timestamp.split("T")[0] === todayDate
-              ? currMeal[name]
+              ? // @ts-ignore
+                currMeal[name]
               : 0)
           );
         }, 0)}

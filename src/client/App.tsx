@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as tf from "@tensorflow/tfjs";
 import { useNavigate } from "react-router-dom";
-import UploadModal from "./UploadModal";
+import UploadModal from "./components/UploadModal";
 import { apiService } from "./services/api-service";
 import { MealTable } from "../server/db/models";
 import Table from "./Table";
