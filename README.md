@@ -22,6 +22,8 @@ A web app that automatically tracks your calories and macros based off photos of
    DB_DATABASE=[YOUR_POSTGRES_DB_NAME]
    JWT_SECRET=[YOUR_JWT_SECRET_KEY]
    JWT_EXPIRES=[YOUR_JWT_EXPIRATION_TIME]
+   NUTRITIONIX_APP_ID=[YOUR_NUTRITIONIX_APP_ID]
+   NUTRITIONIX_APP_KEY=[YOUR_NUTRITIONIX_APP_KEY]
    ```
 
 4. Run the app on http://localhost:4001:

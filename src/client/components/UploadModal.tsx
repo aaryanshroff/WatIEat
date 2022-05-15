@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import * as tf from "@tensorflow/tfjs";
-import { CLASSES } from "./classes";
-import { Meal, MealTable } from "../server/db/models";
-import { apiService } from "./services/api-service";
-import Spinner from "./components/Spinner";
+import { CLASSES } from "../classes";
+import { Meal, MealTable } from "../../server/db/models";
+import { apiService } from "../services/api-service";
+import Spinner from "./Spinner";
 
 interface UploadModalProps {
   setOpenModal: (openModal: boolean) => void;
@@ -54,8 +54,8 @@ const UploadModal: React.FC<UploadModalProps> = (props) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-app-id": "eea5c6b5",
-          "x-app-key": "37dd31fc7769410627e47077f017a68e",
+          "x-app-id": process.env.NUTRITIONIX_APP_ID,
+          "x-app-key": process.env.NUTRITIONIX_APP_KEY,
         },
         body: JSON.stringify({
           query: topPrediction.className,
