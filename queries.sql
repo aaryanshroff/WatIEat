@@ -10,7 +10,7 @@ CREATE TABLE meals (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     user_id INTEGER REFERENCES users (id),
-    timestamp TIMESTAMP,
+    timestamp TIMESTAMP DEFAULT NOW(),
     calories INTEGER NOT NULL,
     carbohydrates INTEGER NOT NULL,
     protein INTEGER NOT NULL

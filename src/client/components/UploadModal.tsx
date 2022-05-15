@@ -95,7 +95,7 @@ const UploadModal: React.FC<UploadModalProps> = (props) => {
 
   return (
     <div className="flex fixed w-screen h-screen justify-center items-center bg-black/50">
-      <div className="bg-white rounded-lg px-6 py-5 w-1/3">
+      <div className="bg-white rounded-lg px-6 py-5 w-full mx-3">
         <div className="flex justify-between items-center pb-5">
           <h1 className="font-semibold text-lg pr-3">Add New Meal</h1>
           <button
