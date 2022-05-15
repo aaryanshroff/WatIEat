@@ -48,14 +48,15 @@ const UploadModal: React.FC<UploadModalProps> = (props) => {
         return b.probability - a.probability;
       })[0];
 
+    // TODO: Refactor Nutritionix API call to server to hide API keys
     const res = await fetch(
       "https://trackapi.nutritionix.com/v2/natural/nutrients",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-app-id": process.env.NUTRITIONIX_APP_ID,
-          "x-app-key": process.env.NUTRITIONIX_APP_KEY,
+          "x-app-id": "eea5c6b5",
+          "x-app-key": "37dd31fc7769410627e47077f017a68e",
         },
         body: JSON.stringify({
           query: topPrediction.className,
