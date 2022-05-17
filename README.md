@@ -5,6 +5,13 @@ A web app that automatically tracks your calories and macros based off photos of
 [Try it out!](http://watieat.herokuapp.com/login)
 
 [Link to demo video (2 min).](https://youtu.be/Dr-VhFkSSUw)
+## Technologies
+- React
+- Express
+- PostgreSQL
+- Tailwind
+- Tensorflow
+- Matplotlib
 
 ## Installation
 
