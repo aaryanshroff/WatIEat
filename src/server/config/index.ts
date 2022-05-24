@@ -24,7 +24,13 @@ const jwt = {
   expires: process.env.JWT_EXPIRES,
 };
 
+const nutritionix = {
+  appID: process.env.NUTRITIONIX_APP_ID,
+  key: process.env.NUTRITIONIX_APP_KEY,
+};
+
 export default {
   db,
   jwt,
+  nutritionix,
 };

@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/client/**/*.tsx"],
+  purge: ["./src/client/**/*.tsx"],
   theme: {
     extend: {},
   },

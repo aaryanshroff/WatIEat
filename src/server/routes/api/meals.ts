@@ -6,6 +6,7 @@ import { MealTable } from "../../db/models";
 
 const router = Router();
 
+// GET /api/meals
 router.get(
   "/",
   passport.authenticate("jwt", { session: false }),
@@ -19,6 +20,7 @@ router.get(
   }
 );
 
+// POST /api/meals
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
@@ -34,6 +36,7 @@ router.post(
   }
 );
 
+// DELETE /api/meals
 router.delete(
   "/",
   passport.authenticate("jwt", { session: false }),
